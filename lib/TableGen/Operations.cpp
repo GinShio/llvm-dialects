@@ -840,7 +840,7 @@ void BuilderMethod::emitDefinition(raw_ostream &out, FmtContext &fmt,
     )",
                  &fmt);
   } else {
-    out << tgfmt("return ::llvm::cast<$_op>($_builder.CreateCall($fn, std::nullopt, $_instname));\n",
+    out << tgfmt("return ::llvm::cast<$_op>($_builder.CreateCall($fn, {}, $_instname));\n",
                  &fmt);
   }
 
